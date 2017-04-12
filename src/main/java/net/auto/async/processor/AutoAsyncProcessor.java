@@ -4,10 +4,9 @@ import com.google.auto.service.AutoService;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.squareup.javapoet.*;
-import net.auto.async.Alternative;
+import net.auto.async.Asyncable;
 import net.auto.async.AutoAsync;
 
-import javax.annotation.Generated;
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.*;
@@ -66,8 +65,8 @@ public class AutoAsyncProcessor extends AbstractProcessor {
                 for (Element enclosed : typeElement.getEnclosedElements()) {
                     if (enclosed.getKind() == ElementKind.METHOD) {
                         ExecutableElement executableElement = (ExecutableElement) enclosed;
-                        Alternative alternative = executableElement.getAnnotation(Alternative.class);
-                        if (alternative != null) {
+                        Asyncable asyncable = executableElement.getAnnotation(Asyncable.class);
+                        if (asyncable != null) {
                             methodSpecs.add(processExecutableElement(executableElement));
                         }
                     }
