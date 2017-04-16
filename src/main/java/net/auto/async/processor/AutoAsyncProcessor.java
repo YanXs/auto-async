@@ -52,7 +52,6 @@ public class AutoAsyncProcessor extends AnnotationProcessorSupport {
                 return true;
             }
             try {
-
                 List<MethodSpec> methodSpecs = new ArrayList<MethodSpec>();
                 for (Element enclosed : typeElement.getEnclosedElements()) {
                     if (enclosed.getKind() == ElementKind.METHOD) {
