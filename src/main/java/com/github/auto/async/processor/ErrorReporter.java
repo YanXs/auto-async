@@ -1,9 +1,12 @@
-package net.auto.async.processor;
+package com.github.auto.async.processor;
 
 import javax.annotation.processing.Messager;
 import javax.lang.model.element.Element;
 import javax.tools.Diagnostic;
 
+/**
+ * @author Xs
+ */
 public class ErrorReporter {
 
     private final Messager messager;

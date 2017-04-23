@@ -1,4 +1,4 @@
-package net.auto.async;
+package com.github.auto.async;
 
 import java.lang.annotation.*;
 

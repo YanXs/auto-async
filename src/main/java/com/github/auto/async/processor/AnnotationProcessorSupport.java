@@ -1,4 +1,4 @@
-package net.auto.async.processor;
+package com.github.auto.async.processor;
 
 import com.squareup.javapoet.*;
 
@@ -13,6 +13,9 @@ import javax.lang.model.type.TypeMirror;
 import javax.lang.model.util.Elements;
 import java.io.IOException;
 
+/**
+ * @author Xs
+ */
 public abstract class AnnotationProcessorSupport extends AbstractProcessor {
 
     protected Elements elementUtils;
