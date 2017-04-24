@@ -1,4 +1,4 @@
-package com.github.auto.async;
+package net.vakilla.auto.async;
 
 import java.lang.annotation.*;
 

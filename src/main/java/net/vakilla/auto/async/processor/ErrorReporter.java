@@ -1,4 +1,4 @@
-package com.github.auto.async.processor;
+package net.vakilla.auto.async.processor;
 
 import javax.annotation.processing.Messager;
 import javax.lang.model.element.Element;
