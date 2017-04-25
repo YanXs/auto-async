@@ -78,7 +78,7 @@ public class AutoAsyncProcessor extends AnnotationProcessorSupport {
 
                             @Override
                             public String value() {
-                                return "AutoAsyncProcessor";
+                                return "net.vakilla.auto.async.processor.AutoAsyncProcessor";
                             }
 
                             @Override
