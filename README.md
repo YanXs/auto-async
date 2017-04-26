@@ -2,12 +2,17 @@
 auto-async是一个基于java APT自动生成异步接口和Facade抽象实现类的库
 
 ## Download
+Maven
 ```xml
 <dependency>
     <groupId>net.vakilla</groupId>
     <artifactId>auto-async</artifactId>
     <version>1.0.0</version>
 </dependency>
+```
+or Gradle
+```xml
+compile 'net.vakilla:auto-async:1.0.0'
 ```
 
 ## 使用方法
