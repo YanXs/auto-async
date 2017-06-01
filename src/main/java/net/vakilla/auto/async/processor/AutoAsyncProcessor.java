@@ -36,11 +36,6 @@ public class AutoAsyncProcessor extends AnnotationProcessorSupport {
     }
 
     @Override
-    public SourceVersion getSupportedSourceVersion() {
-        return SourceVersion.latestSupported();
-    }
-
-    @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
         Collection<? extends Element> annotatedElements = roundEnv.getElementsAnnotatedWith(AutoAsync.class);
         List<TypeElement> types = new ImmutableList.Builder<TypeElement>()
@@ -78,7 +73,7 @@ public class AutoAsyncProcessor extends AnnotationProcessorSupport {
 
                             @Override
                             public String value() {
-                                return "net.vakilla.auto.async.processor.AutoAsyncProcessor";
+                                return AUTO_ASYNC_PROCESSOR_VALUE;
                             }
 
                             @Override
