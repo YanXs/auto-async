@@ -7,12 +7,12 @@ Maven
 <dependency>
     <groupId>net.vakilla</groupId>
     <artifactId>auto-async</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 or Gradle
 ```xml
-compile 'net.vakilla:auto-async:1.0.0'
+compile 'net.vakilla:auto-async:1.0.1'
 ```
 
 ## 使用方法
