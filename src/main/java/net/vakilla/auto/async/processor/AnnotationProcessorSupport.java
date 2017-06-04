@@ -61,9 +61,8 @@ public abstract class AnnotationProcessorSupport extends AbstractProcessor {
     }
 
     protected void generateJavaFile(String packageName, TypeSpec typeSpec) throws IOException {
-        JavaFile javaFile = JavaFile.builder(packageName, typeSpec).build();
-        javaFile.writeTo(filer);
+        JavaFile.builder(packageName, typeSpec).build().writeTo(filer);
     }
 
-    protected abstract MethodSpec processExecutableElement(ExecutableElement executableElement);
+    protected abstract MethodSpec processExecutableElement(ExecutableElement executableElement, boolean strict);
 }
