@@ -7,12 +7,12 @@ Maven
 <dependency>
     <groupId>net.vakilla</groupId>
     <artifactId>auto-async</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 or Gradle
 ```xml
-compile 'net.vakilla:auto-async:1.0.1'
+compile 'net.vakilla:auto-async:1.0.2'
 ```
 
 ## 使用方法
@@ -91,4 +91,5 @@ public abstract class Facade_Unified_SimpleService implements Unified_SimpleServ
 ## 注意事项
 * 生成的异步接口基于guava的ListenableFuture
 * 生成代码使用javapoet库，没有检查方法返回类型，如果方法标记了@Asyncable就会扫描生成异步方法，即使原本的返回类型是Future。
-所以，使用时注意不要在返回类型是Future的方法上添加@Asyncable注解
+所以，可以使用AutoAsync的strict模式（strict = true），这样会检查方法的返回类型是不是Future或者子类，如果是会报错  
+strict模式会影响编译的效率，默认是不开启的，使用时注意不要在返回类型是Future的方法上添加@Asyncable注解
